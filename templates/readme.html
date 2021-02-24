@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>readme</title>
+</head>
+<body>
+
+Petstore api <br>
+<br>
+Welcome to the Pet House. It is a RESTapi built using FLASK and SQLITE3 <br>
+<br>
+structure of pets database: <br>
+pets table<br>
+###pet_name TEXT PRIMARY KEY,<br>
+### pet_type TEXT NOT NULL,<br>
+###owner TEXT NOT NULL<br>
+<br>
+json to be sent for POST request:<br>
+{<br>
+    "pet_name": "oreo",<br>
+    "pet_type": "mouse",<br>
+    "owner": "abhuday"<br>
+}<br>
+<br>
+<br>
+possible routes:<br>
+1.'/allpets' : gets all the pets available in the petstore<br>
+[GET]sample call: localhost:5000/allpets<br>
+<br>
+2.'/pet' : takes an arguement 'id' which will be the petname and gets the details of the pet<br>
+[GET]sample call: localhost:5000/pet?id=rocky<br>
+<br>
+3.'/newpet': accepts a json and adds the new pet to the database<br>
+[POST]sample call: localhost:5000/newpet<br>
+<br>
+4.'/updatepet': accepts json with pet_name(primary key) and other details changed so that they can be updated, make sure to enter all details even if unchanged<br>
+[POST]sample call: localhost:5000/updatepet<br>
+<br>
+5.'/delpet': accepts 'id' which is the petname, delete the pet from the database (say bye cause that lucky guy is going home)<br>
+[DELETE]sample call: localhost:5000/delpet?id=rocky<br>
+<br>
+6.'/mypets': accepts 'id' which will be the owner name, returns all the pets owner has<br>
+[GET]sample call: localhost:5000/mypets?id=abhi<br>
+<br>
+7.'/whosepet': accepts 'id' which will be the petname, find who is the owner of a pet.<br>
+[GET]sample call: localhost:5000/whosepet?id=rocky<br>
+<br>
+8.'/owner': returns all the owners registered to the pet store.<br>
+[GET]sample call: localhost:5000/owner<br>
+<br>
+9.'/hello': all animals say hello <br>
+[GET]sample call: localhost:5000/hello <br>
+</body>
+</html>
